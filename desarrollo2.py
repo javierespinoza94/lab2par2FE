@@ -2,6 +2,7 @@
 import time
 # importing os module
 import os
+from itertools import chain
 
 
 def pedirNumeroEntero():
@@ -65,13 +66,20 @@ while not salir:
             # store para el total de espacios en blanco
             nSpaces = 0
 
+            unique = []
+
             with open(fileName, 'r') as file:
+
                 # loop para iterar el archivo linea por linea
                 for line in file:
                     # usando las propiedades del modulo os
                     # usaremos linesep para separar las lineas por el caracter
                     line = line.strip(os.linesep)
                     wordslist = line.split()
+                    for x in wordslist:
+                        if x not in unique:
+                            unique.append(x)
+                            print(x)
                     nLines = nLines + 1
                     nWords = nWords + len(wordslist)
                     nCharcs = nCharcs + \
@@ -82,7 +90,7 @@ while not salir:
             print('Numero de caracteres incluyendo espacios', nCharcs + nSpaces)
             print('Numero de lineas', nLines)
             print('Numero de palabras totales', nWords)
-            print('Numero de palabras unicas totales', nUniqueWords)
+            print('Numero de palabras unicas totales', len(unique))
             # termina el tiempo de ejecucion
             print("--- %s seconds ---" % (time.time() - start_time))
         except ValueError:

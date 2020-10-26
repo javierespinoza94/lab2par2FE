@@ -46,10 +46,12 @@ while not salir:
     print("Elige una opcion")
 
     opcion = pedirNumeroEntero()
-    # inicia el tiempo de ejecucion
-    start_time = time.time()
+
     if opcion == 1:
-        # funcion que requiere y almacena el nombre del archivo por entrada de consola
+        # inicia el tiempo de ejecucion
+        start_time = time.time()
+      # funcion que requiere y almacena el nombre del archivo por entrada de consola
+
         fileName = perdirNombreString()
         try:
             # store de caracteres
@@ -100,7 +102,8 @@ while not salir:
                                 # incrementamos el contador de los espacios en uno
                                 nCharcs += 1
 
-            print('Numero de caracteres incluyendo espacios', nCharcs + nSpaces)
+            print(
+                'Numero de caracteres incluyendo espacios o doble espacio', nCharcs + nSpaces)
             print('Numero de lineas', nLines)
             print('Numero de palabras totales', nWords)
             print('Numero de palabras unicas totales', len(unique))

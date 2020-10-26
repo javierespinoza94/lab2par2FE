@@ -28,7 +28,7 @@ def perdirNombreString():
                 "Introduce el nombre del archivo a procesar: ")
             correcto = True
         except ValueError:
-            print('Error, introduce un string entero')
+            print('Error')
 
     return nameFile
 
@@ -103,7 +103,7 @@ while not salir:
                                 nCharcs += 1
 
             print(
-                'Numero de caracteres incluyendo espacios o doble espacio', nCharcs + nSpaces)
+                'Numero de caracteres incluyendo espacios', nCharcs + nSpaces)
             print('Numero de lineas', nLines)
             print('Numero de palabras totales', nWords)
             print('Numero de palabras unicas totales', len(unique))

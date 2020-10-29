@@ -88,7 +88,7 @@ while not salir:
                         sum(1 for c in line if c not in (os.linesep, ' '))
 
             print('Numero de caracteres incluyendo espacios', nCharcs + nSpaces)
-            print('Numero de lineas', nLines)
+            print('Numero de lineas totales ', nLines)
             print('Numero de palabras totales', nWords)
             print('Numero de palabras unicas totales', len(unique))
             # termina el tiempo de ejecucion

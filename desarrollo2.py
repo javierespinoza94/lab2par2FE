@@ -79,7 +79,7 @@ while not salir:
                     for x in wordslist:
                         if x not in unique:
                             unique.append(x)
-                            print(x)
+
                     nLines = nLines + 1
                     nWords = nWords + len(wordslist)
                     nCharcs = nCharcs + \
